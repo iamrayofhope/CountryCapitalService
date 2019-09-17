@@ -1,0 +1,19 @@
+zuul:
+  prefix: /api
+  routes:
+      capitalService:
+         service-id: SPRING-CLOUD-CAPITALNAMESERVICE
+         path: /caps/** 
+      continentService:
+         service-id: SPRING-CLOUD-CONTINENTNAMESERVICE   
+         path: /cons/**
+  
+
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:7010/eureka
+        
+spring:
+  application:
+    name: zuul-service
